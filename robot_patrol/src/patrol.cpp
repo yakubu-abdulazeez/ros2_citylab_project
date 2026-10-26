@@ -16,7 +16,7 @@ class Patrol : public rclcpp::Node
 public:
     Patrol() : Node("patrol_node")
     {
-        cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
         laser_sub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
             "/scan", 10, std::bind(&Patrol::laser_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(100ms, std::bind(&Patrol::control_loop, this));

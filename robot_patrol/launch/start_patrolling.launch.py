@@ -4,7 +4,21 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
+    pkg_share = get_package_share_directory('robot_patrol')
+    rviz_config_path = os.path.join(pkg_share, 'config', 'patrol_config.rviz')
+
     return LaunchDescription([
-        Node(package='robot_patrol', executable='patrol_node', name='patrol_node', output='screen'),
-        Node(package='rviz2', executable='rviz2', name='rviz2', output='screen')
+        Node(
+            package='robot_patrol',
+            executable='patrol_node',
+            name='patrol_node',
+            output='screen'
+        ),
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_config_path],
+            output='screen'
+        )
     ])
