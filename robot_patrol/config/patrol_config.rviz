@@ -1,0 +1,64 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Topic: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Grid1
+        - /LaserScan1
+        - /RobotModel1
+      Splitter Ratio: 0.5
+    Tree Height: 549
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 0.1
+      Class: rviz_default_displays/Grid
+      Name: Grid
+      Normal Cell Count: 0
+      Plane Cell Count: 50
+      Value: true
+    - Class: rviz_default_displays/Axes
+      Length: 2.5
+      Name: Axes
+      Radius: 0.01
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_displays/RobotModel
+      Description Topic: /robot_description
+      Enabled: true
+      Name: RobotModel
+      Value: true
+    - Class: rviz_default_displays/TF
+      Name: TF
+      Show Names: true
+      Marker Scale: 0.5
+      Value: true
+    - Autocompute Intensity Bounds: true
+      Class: rviz_default_displays/LaserScan
+      Selectable: true
+      Size (m): 0.025
+      Style: Spheres
+      Topic: /scan
+      Value: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+  Views:
+    Current:
+      Class: rviz_default_view_controllers/Orbit
+      Distance: 3.5
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Name: Current View
+      Pitch: 1.5698
+      Yaw: 3.14159
+      Value: true
